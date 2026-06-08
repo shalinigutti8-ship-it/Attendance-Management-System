@@ -1,5 +1,5 @@
 function addAttendance() {
-    let studentName = document.getElementById("studentName").value;
+    let studentName = document.getElementById("studentName").value.trim();
     let status = document.getElementById("status").value;
 
     if (studentName === "") {
@@ -9,13 +9,15 @@ function addAttendance() {
 
     let table = document.getElementById("attendanceList");
 
+    // IMPORTANT: ensure you're inserting into tbody if present
     let row = table.insertRow();
 
     let nameCell = row.insertCell(0);
     let statusCell = row.insertCell(1);
 
-    nameCell.innerHTML = studentName;
-    statusCell.innerHTML = status;
+    nameCell.textContent = studentName;
+    statusCell.textContent = status;
 
+    // clear input
     document.getElementById("studentName").value = "";
 }
