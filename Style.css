@@ -1,108 +1,67 @@
-/* General Page Style */
-body {
-  font-family: Arial, sans-serif;
-  background: #eef2f7;
-  margin: 0;
-  padding: 0;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Main Container */
 .container {
-  max-width: 750px;
-  margin: 50px auto;
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Title */
-h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+h1, h2 {
+    text-align: center;
+    color: #333;
 }
 
-/* Input Box */
-input[type="text"] {
-  width: 70%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* Add Button */
+input, select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 button {
-  padding: 12px 15px;
-  margin-left: 5px;
-  border: none;
-  border-radius: 6px;
-  background: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-  background: #0056b3;
+    background-color: #0056b3;
 }
 
-/* Table Styling */
 table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 th {
-  background: #007bff;
-  color: white;
-  padding: 12px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
 }
 
 td {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
-/* Status Buttons */
-.present {
-  background: #28a745;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 5px;
-  border: none;
-  margin: 2px;
-}
-
-.present:hover {
-  background: #1e7e34;
-}
-
-.absent {
-  background: #dc3545;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 5px;
-  border: none;
-  margin: 2px;
-}
-
-.absent:hover {
-  background: #b02a37;
-}
-
-/* Delete Button */
-td button:last-child {
-  background: #6c757d;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 5px;
-  border: none;
-}
-
-td button:last-child:hover {
-  background: #545b62;
-}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+} 
