@@ -1,23 +1,33 @@
-function addAttendance() {
-    let studentName = document.getElementById("studentName").value.trim();
-    let status = document.getElementById("status").value;
+let presentCount = 0;
+let absentCount = 0;
 
-    if (studentName === "") {
-        alert("Please enter a student name.");
+function login() {
+    let name = document.getElementById("studentName").value;
+
+    if (name === "") {
+        alert("Enter Student Name");
         return;
     }
 
-    let table = document.getElementById("attendanceList");
+    document.getElementById("loginSection").style.display = "none";
+    document.getElementById("attendanceSection").style.display = "block";
+    document.getElementById("welcome").innerText = "Welcome, " + name;
+}
 
-    // IMPORTANT: ensure you're inserting into tbody if present
-    let row = table.insertRow();
+function markAttendance(status) {
+    let today = new Date().toLocaleDateString();
 
-    let nameCell = row.insertCell(0);
-    let statusCell = row.insertCell(1);
+    let li = document.createElement("li");
+    li.innerText = today + " - " + status;
+    document.getElementById("dailyRecords").appendChild(li);
 
-    nameCell.textContent = studentName;
-    statusCell.textContent = status;
+    if (status === "Present") {
+        presentCount++;
+    } else {
+        absentCount++;
+    }
 
-    // clear input
-    document.getElementById("studentName").value = "";
+    document.getElementById("monthlySummary").innerText =
+        "Present: " + presentCount +
+        " | Absent: " + absentCount;
 }
